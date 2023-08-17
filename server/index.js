@@ -54,6 +54,9 @@ app.use("/public", express.static(join(CURRENT_DIR, "../uploads/")));
 app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
+app.get("/ping", async (req, res) => {
+  res.send("Hola mundo");
+});
 app.use("/api", multerUpload.array("file"), alumnosRoutes);
 app.use("/api", familiaresRoutes);
 app.use("/api", loginRoutes);
