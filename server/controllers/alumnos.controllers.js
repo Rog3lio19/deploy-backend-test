@@ -1,6 +1,7 @@
 import { prisma } from "../db.js";
 import multer from "multer";
 import { dirname, extname, join } from "path";
+import { send } from "process";
 import { fileURLToPath } from "url";
 
 export const crearAlumno = async (req, res) => {
@@ -12,13 +13,15 @@ export const crearAlumno = async (req, res) => {
 };
 
 export const obtenerAlumnos = async (req, res) => {
-  const alumnos = await prisma.alumnos.findFirst({
-    where: {
-      id_alumno: 1,
-    },
-  });
+  // const alumnos = await prisma.alumnos.findFirst({
+  //   where: {
+  //     id_alumno: 1,
+  //   },
+  // });
 
-  res.json(alumnos);
+  // res.json(alumnos);
+
+  send("Hola mudno");
 };
 
 export const obtenerAlumno = async (req, res) => {
