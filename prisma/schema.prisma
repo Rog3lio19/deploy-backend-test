@@ -131,8 +131,8 @@ model alumnos {
   usoIntercambiarInfo               Boolean?
   usoOtros                          Boolean?
   figuraFisica                      String?                          @db.Text
-  estatura                          Int
-  peso                              Float
+  estatura                          Int?
+  peso                              Float?
   problemaSalud                     Boolean?
   tipoProblemaSalud                 String?                          @db.Text
   numSeguro                         String?                          @db.Text
