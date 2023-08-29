@@ -32,7 +32,7 @@ model alumnos {
   correo                            String?                          @db.Text
   nombrePadre                       String?                          @db.Text
   padreVive                         Boolean?
-  fechaPadre                        DateTime                        @db.Date
+  fechaPadre                        DateTime?                        @db.Date
   nacionalidadPadre                 String?                          @db.Text
   lugarNacimientoPadre              String?                          @db.Text
   curpPadre                         String?                          @db.Text
@@ -47,7 +47,7 @@ model alumnos {
   ingresosPadre                     String?                          @db.Text
   nombreMadre                       String?                          @db.Text
   madreVive                         Boolean?
-  fechaMadre                        DateTime                        @db.Date
+  fechaMadre                        DateTime?                        @db.Date
   nacionalidadMadre                 String?                          @db.Text
   lugarNacimientoMadre              String?                          @db.Text
   curpMadre                         String?                          @db.Text
