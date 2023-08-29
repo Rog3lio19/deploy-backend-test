@@ -58,7 +58,7 @@ app.use(cookieParser())
 app.get('/', async (req, res) => {
   const alumno = await prisma.alumnos.findFirst({
     where: {
-      id_alumno: parseInt(req.params.id)
+      id_alumno: 1
     }
   })
 
