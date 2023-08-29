@@ -9,7 +9,7 @@ import { dirname, extname, join } from 'path'
 import { fileURLToPath } from 'url'
 import fs from 'fs'
 import { PORT } from './config.js'
-import { prisma } from '../db.js'
+import { prisma } from './db.js'
 
 const CURRENT_DIR = dirname(fileURLToPath(import.meta.url))
 const mimetypes = ['image/jpeg', 'image/png', 'application/pdf']
