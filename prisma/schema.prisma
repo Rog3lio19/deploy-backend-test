@@ -9,259 +9,259 @@ datasource db {
 
 model alumnos {
   id_alumno                         Int                             @id @default(autoincrement())
-  control_al                        Int
-  folio_al                          Int
-  nombre                            String                          @db.Text
-  apellidoPaterno                   String                          @db.Text
-  apellidoMaterno                   String                          @db.Text
-  genero                            String                          @db.Text
-  curp                              String                          @db.Text
-  fechaNacimiento                   DateTime                        @default(now()) @db.Date
-  nacionalidad                      String                          @db.Text
-  lugarNacimiento                   String                          @db.Text
-  estadoCivil                       String                          @db.Text
-  tieneHijos                        Boolean
-  cuantosHijos                      String                          @db.Text
-  calle                             String                          @db.Text
-  numeroExterior                    String                          @db.Text
-  numeroInterior                    String                          @db.Text
-  colonia                           String                          @db.Text
-  codigoPostal                      String                          @db.Text
-  telefonoCasa                      String                          @db.Text
-  telefonoCelular                   String                          @db.Text
-  correo                            String                          @db.Text
-  nombrePadre                       String                          @db.Text
-  padreVive                         Boolean
+  control_al                        Int?
+  folio_al                          Int?
+  nombre                            String?                          @db.Text
+  apellidoPaterno                   String?                          @db.Text
+  apellidoMaterno                   String?                          @db.Text
+  genero                            String?                          @db.Text
+  curp                              String?                          @db.Text
+  fechaNacimiento                   DateTime?                        @default(now()) @db.Date
+  nacionalidad                      String?                          @db.Text
+  lugarNacimiento                   String?                          @db.Text
+  estadoCivil                       String?                          @db.Text
+  tieneHijos                        Boolean?
+  cuantosHijos                      String?                          @db.Text
+  calle                             String?                          @db.Text
+  numeroExterior                    String?                          @db.Text
+  numeroInterior                    String?                          @db.Text
+  colonia                           String?                          @db.Text
+  codigoPostal                      String?                          @db.Text
+  telefonoCasa                      String?                          @db.Text
+  telefonoCelular                   String?                          @db.Text
+  correo                            String?                          @db.Text
+  nombrePadre                       String?                          @db.Text
+  padreVive                         Boolean?
   fechaPadre                        DateTime                        @db.Date
-  nacionalidadPadre                 String                          @db.Text
-  lugarNacimientoPadre              String                          @db.Text
-  curpPadre                         String                          @db.Text
-  gradoEstudiosPadre                String                          @db.Text
-  telefonoCasaPadre                 String                          @db.Text
-  telefonoCelularPadre              String                          @db.Text
-  viveContigoPadre                  Boolean
-  domicilioPadre                    String                          @db.Text
-  trabajaPadre                      Boolean
-  ocupacionPadre                    String                          @db.Text
-  lugarTrabajoPadre                 String                          @db.Text
-  ingresosPadre                     String                          @db.Text
-  nombreMadre                       String                          @db.Text
-  madreVive                         Boolean
+  nacionalidadPadre                 String?                          @db.Text
+  lugarNacimientoPadre              String?                          @db.Text
+  curpPadre                         String?                          @db.Text
+  gradoEstudiosPadre                String?                          @db.Text
+  telefonoCasaPadre                 String?                          @db.Text
+  telefonoCelularPadre              String?                          @db.Text
+  viveContigoPadre                  Boolean?
+  domicilioPadre                    String?                          @db.Text
+  trabajaPadre                      Boolean?
+  ocupacionPadre                    String?                          @db.Text
+  lugarTrabajoPadre                 String?                          @db.Text
+  ingresosPadre                     String?                          @db.Text
+  nombreMadre                       String?                          @db.Text
+  madreVive                         Boolean?
   fechaMadre                        DateTime                        @db.Date
-  nacionalidadMadre                 String                          @db.Text
-  lugarNacimientoMadre              String                          @db.Text
-  curpMadre                         String                          @db.Text
-  gradoEstudiosMadre                String                          @db.Text
-  telefonoCasaMadre                 String                          @db.Text
-  telefonoCelularMadre              String                          @db.Text
-  viveContigoMadre                  Boolean
-  domicilioMadre                    String                          @db.Text
-  trabajaMadre                      Boolean
-  ocupacionMadre                    String                          @db.Text
-  lugarTrabajoMadre                 String                          @db.Text
-  ingresosMadre                     String                          @db.Text
-  tutor                             String                          @db.Text
-  casa                              String                          @db.Text
-  tipoCasa                          String                          @db.Text
-  tipoParedes                       String                          @db.Text
-  piso                              String                          @db.Text
-  tipoTecho                         String                          @db.Text
-  aguaPotable                       Boolean
-  drenaje                           Boolean
-  electricidad                      Boolean
-  lavadora                          Boolean
-  estufaGas                         Boolean
-  hornoMicroondas                   Boolean
-  refrigerador                      Boolean
-  lineaTelefonica                   Boolean
-  computadoraEscritorio             Boolean
-  laptop                            Boolean
-  tableta                           Boolean
-  internet                          Boolean
-  televisionPaga                    Boolean
-  secadora                          Boolean
-  tabletaPersonal                   Boolean
-  laptopPersonal                    Boolean
-  smartphonePersonal                Boolean
-  focosCasa                         String                          @db.Text
-  televisionesCasa                  String                          @db.Text
-  pertenecesGrupoIndigena           Boolean
-  cualGrupoIndigena                 String                          @db.Text
-  trabajasActualmente               Boolean
-  nombreEmpresa                     String                          @db.Text
-  cargoEmpresa                      String                          @db.Text
-  ubicacionEmpresa                  String                          @db.Text
-  telefonoEmpresa                   String                          @db.Text
-  trabajoHorarioInicio              String                          @db.Text
-  trabajoHorarioFin                 String                          @db.Text
-  tuIngresoMensual                  String                          @db.Text
-  casaInternet                      Boolean
-  cafeInternet                      Boolean
-  escuelaInternet                   Boolean
-  casaAmigoInternet                 Boolean
-  trabajoInternet                   Boolean
-  otroLugarInternet                 Boolean
-  usoInternetJugar                  Boolean
-  usoInternetEmail                  Boolean
-  usoInternetBancaLinea             Boolean
-  usoInternetRS                     Boolean
-  usoInternetBuscarAmigos           Boolean
-  usoInternetForosDiscusion         Boolean
-  usoInternetNoticias               Boolean
-  usoInternetVideos                 Boolean
-  usoInternetInfo                   Boolean
-  usoInternetSoftware               Boolean
-  usoInternetPeliculas              Boolean
-  usoInternetMusica                 Boolean
-  usoInternetEmpleo                 Boolean
-  usoInternetPareja                 Boolean
-  usoInternetCompras                Boolean
-  usoInternetLlamadas               Boolean
-  usoInternetPaginaAdultos          Boolean
-  tienesEmail                       Boolean
-  tienesYoutube                     Boolean
-  tienesRedSocial                   Boolean
-  usoComunicacion                   Boolean
-  usoAmistad                        Boolean
-  usoBuscarAmigos                   Boolean
-  usoRelacionesProfesionales        Boolean
-  usoBuscarPareja                   Boolean
-  usoEntretenimiento                Boolean
-  usoTrabajoEscolares               Boolean
-  usoIntercambiarInfo               Boolean
-  usoOtros                          Boolean
-  figuraFisica                      String                          @db.Text
+  nacionalidadMadre                 String?                          @db.Text
+  lugarNacimientoMadre              String?                          @db.Text
+  curpMadre                         String?                          @db.Text
+  gradoEstudiosMadre                String?                          @db.Text
+  telefonoCasaMadre                 String?                          @db.Text
+  telefonoCelularMadre              String?                          @db.Text
+  viveContigoMadre                  Boolean?
+  domicilioMadre                    String?                          @db.Text
+  trabajaMadre                      Boolean?
+  ocupacionMadre                    String?                          @db.Text
+  lugarTrabajoMadre                 String?                          @db.Text
+  ingresosMadre                     String?                          @db.Text
+  tutor                             String?                          @db.Text
+  casa                              String?                          @db.Text
+  tipoCasa                          String?                          @db.Text
+  tipoParedes                       String?                          @db.Text
+  piso                              String?                          @db.Text
+  tipoTecho                         String?                          @db.Text
+  aguaPotable                       Boolean?
+  drenaje                           Boolean?
+  electricidad                      Boolean?
+  lavadora                          Boolean?
+  estufaGas                         Boolean?
+  hornoMicroondas                   Boolean?
+  refrigerador                      Boolean?
+  lineaTelefonica                   Boolean?
+  computadoraEscritorio             Boolean?
+  laptop                            Boolean?
+  tableta                           Boolean?
+  internet                          Boolean?
+  televisionPaga                    Boolean?
+  secadora                          Boolean?
+  tabletaPersonal                   Boolean?
+  laptopPersonal                    Boolean?
+  smartphonePersonal                Boolean?
+  focosCasa                         String?                          @db.Text
+  televisionesCasa                  String?                          @db.Text
+  pertenecesGrupoIndigena           Boolean?
+  cualGrupoIndigena                 String?                          @db.Text
+  trabajasActualmente               Boolean?
+  nombreEmpresa                     String?                          @db.Text
+  cargoEmpresa                      String?                          @db.Text
+  ubicacionEmpresa                  String?                          @db.Text
+  telefonoEmpresa                   String?                          @db.Text
+  trabajoHorarioInicio              String?                          @db.Text
+  trabajoHorarioFin                 String?                          @db.Text
+  tuIngresoMensual                  String?                          @db.Text
+  casaInternet                      Boolean?
+  cafeInternet                      Boolean?
+  escuelaInternet                   Boolean?
+  casaAmigoInternet                 Boolean?
+  trabajoInternet                   Boolean?
+  otroLugarInternet                 Boolean?
+  usoInternetJugar                  Boolean?
+  usoInternetEmail                  Boolean?
+  usoInternetBancaLinea             Boolean?
+  usoInternetRS                     Boolean?
+  usoInternetBuscarAmigos           Boolean?
+  usoInternetForosDiscusion         Boolean?
+  usoInternetNoticias               Boolean?
+  usoInternetVideos                 Boolean?
+  usoInternetInfo                   Boolean?
+  usoInternetSoftware               Boolean?
+  usoInternetPeliculas              Boolean?
+  usoInternetMusica                 Boolean?
+  usoInternetEmpleo                 Boolean?
+  usoInternetPareja                 Boolean?
+  usoInternetCompras                Boolean?
+  usoInternetLlamadas               Boolean?
+  usoInternetPaginaAdultos          Boolean?
+  tienesEmail                       Boolean?
+  tienesYoutube                     Boolean?
+  tienesRedSocial                   Boolean?
+  usoComunicacion                   Boolean?
+  usoAmistad                        Boolean?
+  usoBuscarAmigos                   Boolean?
+  usoRelacionesProfesionales        Boolean?
+  usoBuscarPareja                   Boolean?
+  usoEntretenimiento                Boolean?
+  usoTrabajoEscolares               Boolean?
+  usoIntercambiarInfo               Boolean?
+  usoOtros                          Boolean?
+  figuraFisica                      String?                          @db.Text
   estatura                          Int
   peso                              Float
-  problemaSalud                     Boolean
-  tipoProblemaSalud                 String                          @db.Text
-  numSeguro                         String                          @db.Text
-  serviciosMedicos                  String                          @db.Text
-  otroServicioMedico                String                          @db.Text
-  frecuenciaMedico                  String                          @db.Text
-  frecuenciaDentista                String                          @db.Text
-  necesitasLentes                   String                          @db.Text
-  discapacidadMotriz                Boolean
-  discapacidadAuditiva              Boolean
-  discapacidadVisual                Boolean
-  discapacidadIntelectual           Boolean
-  discapacidadOtra                  Boolean
-  discapacidadOtraEspecifica        String                          @db.Text
-  tratamientoMental                 Boolean
-  asistenciaTratamientoMental       String                          @db.Text
-  tienesAlergia                     Boolean
-  tiposAlergias                     String                          @db.Text
-  especificaAlergias                String                          @db.Text
-  problemasCorazon                  Boolean
-  tratamientoCorazon                Boolean
-  problemasEpilepsia                Boolean
-  tratamientoEpilepsia              Boolean
-  problemasAsma                     Boolean
-  tratamientoAsma                   Boolean
-  problemasVertigo                  Boolean
-  tratamientoVertigo                Boolean
-  problemasMigrana                  Boolean
-  tratamientoMigrana                Boolean
-  otroTratamientoMedico             Boolean
-  especificaOtroTratamientoMedico   String                          @db.Text
-  vacunadoCovid                     Boolean
-  numVacunasCovid                   Int
-  ultimaVacunaCovid                 DateTime                        @default(now()) @db.Date
-  transtornoGastrointestinal        String                          @db.Text
-  transtornoRespiratorio            String                          @db.Text
-  transtornoCirculatorio            String                          @db.Text
-  transtornoPiel                    String                          @db.Text
-  transtornoNeurologico             String                          @db.Text
-  transtornoGenitourinario          String                          @db.Text
-  frecuenciaDesayuno                String                          @db.Text
-  frecuenciaComes                   String                          @db.Text
-  frecuenciaCenas                   String                          @db.Text
-  consumirFrutas                    String                          @db.Text
-  consumirVerduras                  String                          @db.Text
-  consumirCereales                  String                          @db.Text
-  consumirTuberculos                String                          @db.Text
-  consumirLacteos                   String                          @db.Text
-  consumirLeguminosas               String                          @db.Text
-  consumirCarneRoja                 String                          @db.Text
-  consumirCarneBlanca               String                          @db.Text
-  consumirSodas                     String                          @db.Text
-  consumirJugosNaturalesEnvasados   String                          @db.Text
-  consumirGolosinas                 String                          @db.Text
-  consumirGolosinasSaladas          String                          @db.Text
-  consumirComidaRapida              String                          @db.Text
-  consumirPanDulce                  String                          @db.Text
-  consumirPanBlanco                 String                          @db.Text
-  consumirTortillas                 String                          @db.Text
-  vecesSemanaEjercicio              String                          @db.Text
-  practicasFutbol                   Boolean
-  practicasTenis                    Boolean
-  practicasBoxeo                    Boolean
-  practicasBeisbol                  Boolean
-  practicasGimnasia                 Boolean
-  practicasLucha                    Boolean
-  practicasBasquetbol               Boolean
-  practicasJudo                     Boolean
-  practicasCiclismo                 Boolean
-  practicasNatacion                 Boolean
-  practicasKarate                   Boolean
-  practicasCharreria                Boolean
-  practicasAtletismo                Boolean
-  practicasHalterofilia             Boolean
-  practicasOtro                     Boolean
-  irParque                          Boolean
-  irCine                            Boolean
-  irBailar                          Boolean
-  jugarVideojuegos                  Boolean
-  hacerDeporte                      Boolean
-  reunirteAmigos                    Boolean
-  salirPareja                       Boolean
-  escucharMusica                    Boolean
-  usarComputadora                   Boolean
-  verTV                             Boolean
-  verPeliculas                      Boolean
-  leer                              Boolean
-  otrasActividades                  Boolean
-  especificaOtrasActividades        String                          @db.Text
-  buenaComunicacionPadres           String                          @db.Text
-  existeBuenaComunicacionPadres     String                          @db.Text
-  faltasReglasHogarCorrectivo       String                          @db.Text
-  maltratoMiembroFamilia            String                          @db.Text
-  participasDecisionesHogar         String                          @db.Text
-  padresInteresActividadesEscolares String                          @db.Text
-  fumas                             Boolean
-  frecuenciaFumas                   String                          @db.Text
-  consumesCerveza                   Boolean
-  frecuenciaCerveza                 String                          @db.Text
-  consumesLicores                   Boolean
-  frecuenciaLicores                 String                          @db.Text
-  consumesVinos                     Boolean
-  frecuenciaVinos                   String                          @db.Text
-  consumesDrogas                    Boolean
-  tipoDroga                         String                          @db.Text
-  opcionUnoCarrera                  String
-  opcionDosCarrera                  String
-  opcionTresCarrera                 String
-  tienesBeca                        Boolean
-  tipoBeca                          String                          @db.Text
-  especificaBeca                    String                          @db.Text
-  clubFutbol                        Boolean
-  clubBasquetbol                    Boolean
-  clubBeisbol                       Boolean
-  clubVoleybol                      Boolean
-  clubAtletismo                     Boolean
-  clubBandaGuerra                   Boolean
-  clubDanza                         Boolean
-  clubEscolta                       Boolean
-  clubRondalla                      Boolean
-  clubRobotica                      Boolean
-  clubCinematografia                Boolean
-  clubPeriodismo                    Boolean
-  clubPorras                        Boolean
-  certificadoSecundaria             String                          @db.Text
-  actaNacimiento                    String                          @db.Text
-  curpArchivo                       String                          @db.Text
-  altaIMSS                          String                          @db.Text
-  formatoFM3                        String                          @db.Text
+  problemaSalud                     Boolean?
+  tipoProblemaSalud                 String?                          @db.Text
+  numSeguro                         String?                          @db.Text
+  serviciosMedicos                  String?                          @db.Text
+  otroServicioMedico                String?                          @db.Text
+  frecuenciaMedico                  String?                          @db.Text
+  frecuenciaDentista                String?                          @db.Text
+  necesitasLentes                   String?                          @db.Text
+  discapacidadMotriz                Boolean?
+  discapacidadAuditiva              Boolean?
+  discapacidadVisual                Boolean?
+  discapacidadIntelectual           Boolean?
+  discapacidadOtra                  Boolean?
+  discapacidadOtraEspecifica        String?                          @db.Text
+  tratamientoMental                 Boolean?
+  asistenciaTratamientoMental       String?                          @db.Text
+  tienesAlergia                     Boolean?
+  tiposAlergias                     String?                          @db.Text
+  especificaAlergias                String?                          @db.Text
+  problemasCorazon                  Boolean?
+  tratamientoCorazon                Boolean?
+  problemasEpilepsia                Boolean?
+  tratamientoEpilepsia              Boolean?
+  problemasAsma                     Boolean?
+  tratamientoAsma                   Boolean?
+  problemasVertigo                  Boolean?
+  tratamientoVertigo                Boolean?
+  problemasMigrana                  Boolean?
+  tratamientoMigrana                Boolean?
+  otroTratamientoMedico             Boolean?
+  especificaOtroTratamientoMedico   String?                          @db.Text
+  vacunadoCovid                     Boolean?
+  numVacunasCovid                   Int?
+  ultimaVacunaCovid                 DateTime?                        @default(now()) @db.Date
+  transtornoGastrointestinal        String?                          @db.Text
+  transtornoRespiratorio            String?                          @db.Text
+  transtornoCirculatorio            String?                          @db.Text
+  transtornoPiel                    String?                          @db.Text
+  transtornoNeurologico             String?                          @db.Text
+  transtornoGenitourinario          String?                          @db.Text
+  frecuenciaDesayuno                String?                          @db.Text
+  frecuenciaComes                   String?                          @db.Text
+  frecuenciaCenas                   String?                          @db.Text
+  consumirFrutas                    String?                          @db.Text
+  consumirVerduras                  String?                          @db.Text
+  consumirCereales                  String?                          @db.Text
+  consumirTuberculos                String?                          @db.Text
+  consumirLacteos                   String?                          @db.Text
+  consumirLeguminosas               String?                          @db.Text
+  consumirCarneRoja                 String?                          @db.Text
+  consumirCarneBlanca               String?                          @db.Text
+  consumirSodas                     String?                          @db.Text
+  consumirJugosNaturalesEnvasados   String?                          @db.Text
+  consumirGolosinas                 String?                          @db.Text
+  consumirGolosinasSaladas          String?                          @db.Text
+  consumirComidaRapida              String?                          @db.Text
+  consumirPanDulce                  String?                          @db.Text
+  consumirPanBlanco                 String?                          @db.Text
+  consumirTortillas                 String?                          @db.Text
+  vecesSemanaEjercicio              String?                          @db.Text
+  practicasFutbol                   Boolean?
+  practicasTenis                    Boolean?
+  practicasBoxeo                    Boolean?
+  practicasBeisbol                  Boolean?
+  practicasGimnasia                 Boolean?
+  practicasLucha                    Boolean?
+  practicasBasquetbol               Boolean?
+  practicasJudo                     Boolean?
+  practicasCiclismo                 Boolean?
+  practicasNatacion                 Boolean?
+  practicasKarate                   Boolean?
+  practicasCharreria                Boolean?
+  practicasAtletismo                Boolean?
+  practicasHalterofilia             Boolean?
+  practicasOtro                     Boolean?
+  irParque                          Boolean?
+  irCine                            Boolean?
+  irBailar                          Boolean?
+  jugarVideojuegos                  Boolean?
+  hacerDeporte                      Boolean?
+  reunirteAmigos                    Boolean?
+  salirPareja                       Boolean?
+  escucharMusica                    Boolean?
+  usarComputadora                   Boolean?
+  verTV                             Boolean?
+  verPeliculas                      Boolean?
+  leer                              Boolean?
+  otrasActividades                  Boolean?
+  especificaOtrasActividades        String?                          @db.Text
+  buenaComunicacionPadres           String?                          @db.Text
+  existeBuenaComunicacionPadres     String?                          @db.Text
+  faltasReglasHogarCorrectivo       String?                          @db.Text
+  maltratoMiembroFamilia            String?                          @db.Text
+  participasDecisionesHogar         String?                          @db.Text
+  padresInteresActividadesEscolares String?                          @db.Text
+  fumas                             Boolean?
+  frecuenciaFumas                   String?                          @db.Text
+  consumesCerveza                   Boolean?
+  frecuenciaCerveza                 String?                          @db.Text
+  consumesLicores                   Boolean?
+  frecuenciaLicores                 String?                          @db.Text
+  consumesVinos                     Boolean?
+  frecuenciaVinos                   String?                          @db.Text
+  consumesDrogas                    Boolean?
+  tipoDroga                         String?                          @db.Text
+  opcionUnoCarrera                  String?
+  opcionDosCarrera                  String?
+  opcionTresCarrera                 String?
+  tienesBeca                        Boolean?
+  tipoBeca                          String?                          @db.Text
+  especificaBeca                    String?                          @db.Text
+  clubFutbol                        Boolean?
+  clubBasquetbol                    Boolean?
+  clubBeisbol                       Boolean?
+  clubVoleybol                      Boolean?
+  clubAtletismo                     Boolean?
+  clubBandaGuerra                   Boolean?
+  clubDanza                         Boolean?
+  clubEscolta                       Boolean?
+  clubRondalla                      Boolean?
+  clubRobotica                      Boolean?
+  clubCinematografia                Boolean?
+  clubPeriodismo                    Boolean?
+  clubPorras                        Boolean?
+  certificadoSecundaria             String?                          @db.Text
+  actaNacimiento                    String?                          @db.Text
+  curpArchivo                       String?                          @db.Text
+  altaIMSS                          String?                          @db.Text
+  formatoFM3                        String?                          @db.Text
   familiares                        familiares[]
   talleres_seleccionados_alumnos    talleres_seleccionados_alumnos?
 }
